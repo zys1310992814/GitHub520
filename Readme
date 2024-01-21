@@ -13,3 +13,4 @@ ssh-keygen -t rsa -C "youremail@example.com"
 win11刷新DNS
 ipconfig /flushdns
 --------------------------------------------------------------------------------
+add test1.
