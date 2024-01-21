@@ -1,4 +1,4 @@
-2.3 一行命令 (适用于类 Unix 系统)
+一行命令 (适用于类 Unix 系统)
 GNU（Ubuntu/CentOS/Fedora）
 sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
 --------------------------------------------------------------------------------
