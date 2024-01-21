@@ -1,3 +1,12 @@
-This is a test file.
-hello everyone.
-521xueweihan/GitHub520
+2.3 一行命令 (适用于类 Unix 系统)
+GNU（Ubuntu/CentOS/Fedora）
+sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
+--------------------------------------------------------------------------------
+sudo /etc/init.d/nscd restart
+sudo /etc/init.d/networking restart
+--------------------------------------------------------------------------------
+git-换电脑了新电脑如何使用
+1.生产秘钥文件
+ssh-keygen -t rsa -C "youremail@example.com"
+2.用户主文件 C:\Users\Administrator\.ssh 找到 id_rsa和id_rsa.pub
+3.github添加秘钥  在Key文本框里粘贴id_rsa.pub文件的内容：title随便填
