@@ -13,15 +13,16 @@ ssh-keygen -t rsa -C "youremail@example.com"
 win11刷新DNS
 ipconfig /flushdns
 --------------------------------------------------------------------------------
-add test1.
---------------------------------------------------------------------------------
-add test2.
---------------------------------------------------------------------------------
-add test3.
---------------------------------------------------------------------------------
-add test4.
---------------------------------------------------------------------------------
 https://www.dogfight360.com/blog/686/
 --------------------------------------------------------------------------------
-add test5.
+sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
+sudo /etc/init.d/nscd restart
+sudo /etc/init.d/networking restart
+cd caddy/
+sudo cp steamcommunityCA.pem /usr/local/share/ca-certificates/steamcommunityCA.crt
+sudo update-ca-certificates
+sudo chmod +x caddy 
+sudo ./caddy run --config steamcommunity_302.caddy.json --adapter caddyfile
+ssh -T git@github.com
+ssh -v git@github.com
 --------------------------------------------------------------------------------
