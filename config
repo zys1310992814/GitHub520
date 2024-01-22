@@ -1,0 +1,10 @@
+Host github.com
+  HostName      ssh.github.com
+  User          git
+  IdentityFile  /home/xiaomi/.ssh/id_rsa_github
+  Port          443
+
+Host gitee.com
+  HostName      gitee.com
+  User          git
+  IdentityFile  /home/xiaomi/.ssh/id_rsa_gitee
