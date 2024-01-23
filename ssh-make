@@ -1,16 +1,15 @@
 #!/bin/bash
- 
 ps | grep ssh-agent > /dev/null
 if [ $? -ne 0 ]; then
 	echo "ssh-agent is not running, so start it!"
-	ssh-agent > ~/ssh_agent_var.sh
+	ssh-agent > ./ssh_agent_var.sh
 	
-	source ~/ssh_agent_var.sh
+	source ./ssh_agent_var.sh
  
 	ssh-add /home/xiaomi/.ssh/id_rsa_github
 	ssh-add /home/xiaomi/.ssh/id_rsa_gitee
 	ssh-add -l
 else
 	echo "ssh-agent is already running!"
-	source ~/ssh_agent_var.sh
+	source ./ssh_agent_var.sh
 fi
