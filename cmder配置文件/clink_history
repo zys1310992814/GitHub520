@@ -43,4 +43,25 @@ git lfs track "*.zip"
 git add .gitattributes
 git add file.zip
 git commit -m "Add design file"
+git push -u origin main
+git rm -r --cached '*.zip'
+git rm -r --cached cmder.zip
+git push -f --all
+git config lfs.https://github.com/zys1310992814/GitHub520.git/info/lfs.locksverify false
+git config lfs.https://gitee.com/zys1310992814/test.git/info/lfs.locksverify false
+git config http.sslVerify false
+git add .
 git push origin main
+git add cmder.zip
+git lfs ls-files
+git lfs track "*.zip"
+git add .gitattributes
+git commit -m "submit file"
+git push -u origin main -f
+git push -u origin master -f
+rm .git/hooks/pre-push
+git lfs pull
+ssh-add ..\..\.ssh\id_rsa_github
+ssh-add ..\..\.ssh\id_rsa_gitee
+ssh-add -l
+wsl --mount  \\.\PHYSICALDRIVE1 --partition 1
