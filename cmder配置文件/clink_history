@@ -38,3 +38,9 @@ Remove-Item (Get-PSReadlineOption).HistorySavePath
 ssh -v git@github.com
 ssh -v gitee@gitee.com
 ssh-add -l
+git lfs install
+git lfs track "*.zip"
+git add .gitattributes
+git add file.zip
+git commit -m "Add design file"
+git push origin main

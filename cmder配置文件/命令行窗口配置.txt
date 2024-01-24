@@ -1,0 +1,14 @@
+窗口大小：宽度154，高度33
+窗口位置：左171，上69
+
+联想性能模式调节LenovoUtility
+应用商店安装Lenovo Hotkeys
+
+%1 mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c ""%~s0"" ::","","runas",1)(window.close)&&exit
+
+打开批处理中文显示乱码：
+1.导入字体
+D:\BaiduNetdiskDownload\lenovo\终端字体.reg
+2.打开C:\Windows\System32\cmd.exe，准备切换字体编码为中文
+输入：chcp 936
+右键选择丢弃副本，否则关闭后下次打开还是以前的

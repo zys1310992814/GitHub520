@@ -1,0 +1,27 @@
+#!/bin/bash
+#设置github访问
+echo -e "\033[41;30m 是否使用github代理? \033[0m"
+echo -e -n "Continue [y/N]?\n"
+read -t 10 YN
+if [ "$(echo "$YN" | grep -i -e 'y' -e 'yes')" != "" ];then
+	if [ -d "/media/xiaomi/win11" ]; then
+	echo "\033[41;30m 把win11的hosts拷贝过来 \033[0m"
+		sudo rsync -aH  -P --progress --delete -r /media/xiaomi/win11/Windows/System32/drivers/etc/hosts /etc/
+	else
+		sudo rsync -aH  -P --progress --delete -r /home/xiaomi/linuxmint备份/caddy/hosts /etc/
+	fi
+	cd /home/xiaomi/linuxmint备份/caddy
+	#sudo cp steamcommunityCA.pem /usr/local/share/ca-certificates/steamcommunityCA.crt
+	#sudo update-ca-certificates
+	#sudo chmod +x caddy
+
+	ps -a | grep caddy > /dev/null
+	if [ $? -ne 0 ]; then
+		sudo ./caddy run --config steamcommunity_302.caddy.json --adapter caddyfile &
+	fi
+else
+	#如果不使用代理
+	sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
+	sudo /etc/init.d/networking restart
+	sudo /etc/init.d/nscd restart
+fi

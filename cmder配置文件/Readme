@@ -1,0 +1,30 @@
+--------------------------------------------------------------------------------
+sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
+--------------------------------------------------------------------------------
+sudo /etc/init.d/nscd restart
+sudo /etc/init.d/networking restart
+--------------------------------------------------------------------------------
+git-换电脑了新电脑如何使用
+1.生产秘钥文件
+ssh-keygen -t rsa -C "youremail@example.com"
+2.用户主文件 C:\Users\Administrator\.ssh 找到 id_rsa和id_rsa.pub
+3.github添加秘钥  在Key文本框里粘贴id_rsa.pub文件的内容：title随便填
+--------------------------------------------------------------------------------
+win11刷新DNS
+ipconfig /flushdns
+--------------------------------------------------------------------------------
+https://www.dogfight360.com/blog/686/
+--------------------------------------------------------------------------------
+sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
+sudo /etc/init.d/nscd restart
+sudo /etc/init.d/networking restart
+cd caddy/
+sudo cp steamcommunityCA.pem /usr/local/share/ca-certificates/steamcommunityCA.crt
+sudo update-ca-certificates
+sudo chmod +x caddy 
+sudo ./caddy run --config steamcommunity_302.caddy.json --adapter caddyfile
+ssh -T git@github.com
+ssh -v git@github.com
+--------------------------------------------------------------------------------
+如果打开还是无法访问，尝试关闭后重新打开
+--------------------------------------------------------------------------------
