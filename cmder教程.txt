@@ -1,0 +1,7 @@
+关于Cmder修改命令提示符的问题
+昨天下了最新版的cmder v1.3.19，发现之前的修改提示符的方法不好使 了，先分享自己的解决办法，不喜勿喷~ 0.0
+
+打开并编辑文件：vendor/clink.lua
+第175行
+prompt_lambSymbol 改成你要的提示符
+ clink.prompt.value = string.gsub(prompt, "{lamb}", "$") // prompt_lambSymbol 改成你要的提示符
